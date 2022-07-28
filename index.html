@@ -1,85 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional edTech</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional course platform in the world !</title>
+
+    <!---------------font-awesome cdn ---------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+
+    <!------------ Flowbite cdn  --------------->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
+
+    <!----------------- DaisyUI CDN  ---------------->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.20.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--------------- Custom Stylesheet  --------------->
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <!----------------------- navbar start ----------------- -->
-    <header class="container mt-4">
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand fw-bold" href="#">Pro Edu</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav ">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
+    <!------------------header starts  ------------------->
+    <header>
+        <nav class="bg-slate-100 px-2 py-2.5 sm:px-4 dark:bg-gray-900 fixed w-full z-20 top-0 left-0">
+            <div class="xl:container flex flex-wrap justify-between items-center mx-auto md:px-20 lg:px-40">
+                <a href="index.html" class="flex items-center">
+                    <span class="self-center text-3xl font-bold whitespace-nowrap cursor-pointer dark:text-white">
+                        Master<span class="text-[#4506CB]">Professional</span>
+                    </span>
+                </a>
+                <div class="flex md:order-2">
 
+                    <button data-collapse-toggle="navbar-sticky" type="button"
+                        class="inline-flex items-center p-2 text-lg text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="navbar-sticky" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                    <ul
+                        class="flex flex-col p-4 mt-4 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:border-gray-700">
+                        <li>
+                            <a href="index.html"
+                                class="block py-2 pr-4 pl-3 text-lg text-white bg-[#4506CB] rounded md:bg-transparent md:text-[#4506CB] md:p-0 dark:text-white"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#courses"
+                                class="block py-2 pr-4 pl-3 text-lg text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4506CB] md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Courses</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-lg text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4506CB] md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Deals</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-lg text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4506CB] md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Success</a>
+                        </li>
+                        <li>
+                            <a href="#contact"
+                                class="block py-2 pr-4 pl-3 text-lg text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4506CB] md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <!--------------- --------------------
-        -navbar end 
-        ---------------------------------- -->
-
-    <!-------------- banner start ---------- -->
-    <section>
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-
-                    <img src="./images/banner.jpg" class="d-block w-100" alt="...">
+    <!------------- header ends-------------------  -->
+    <!-------------------- Banner area starts  ------------------>
+    <div class="carousel w-full h-full lg:max-w-[76%] lg:max-h-[640px] sm:w-[90%] mx-auto mt-24 rounded-md">
+        <!-- slider 1  -->
+        <div id="slide1" class="carousel-item relative w-full bg-zinc-800">
+            <img src="img/cover/cover-1.png" class="w-full absolute mix-blend-overlay" />
+            <div class="absolute flex justify-between items-center transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide3"
+                    class="btn btn-circle bg-transparent text-white border-transparent text-sm md:text-xl">❮</a>
+                <div class="xl:px-36 lg:px-24 md:px-5 flex flex-col justify-center items-center">
+                    <h1
+                        class="text-xl xl:text-6xl lg:text-5xl md:text-4xl text-center font-bold text-white tracking-wide uppercase">
+                        Take the first step to learn with us !
+                    </h1>
+                    <p
+                        class="text-center text-white text-xs lg:text-xl md:text-base tracking-wide mt-1 md:mt-2 xl:mt-5 lg:mb-5">
+                        You can take first step to learn and build your career with us.
+                        Choose a best course ans start learning.
+                    </p>
+                    <button
+                        class="btn btn-active btn-primary text-xs lg:text-base md:text-xs tracking-wide font-bold w-32 h-6 lg:w-40 lg:h-14 md:w-36 md:h-6 mx-auto my-5 md:my-2">
+                        <a href="#">GET STARTED</a>
+                    </button>
                 </div>
-
-
+                <a href="#slide2"
+                    class="btn btn-circle bg-transparent text-white border-transparent text-sm md:text-xl">❯</a>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-    </section>
+        <div id="slide2" class="carousel-item relative w-full bg-zinc-800">
+            <img src="img/cover/cover-2.jpg" class="w-full absolute mix-blend-overlay" />
+            <div class="absolute flex justify-between items-center transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1"
+                    class="btn btn-circle bg-transparent text-white border-transparent text-sm md:text-xl">❮</a>
+                <div class="xl:px-36 lg:px-24 md:px-5 flex flex-col justify-center items-center">
+                    <h1
+                        class="text-xl xl:text-6xl lg:text-5xl md:text-4xl text-center font-bold text-white tracking-wide uppercase">
+                        Become a successful person !
+                    </h1>
+                    <p
+                        class="text-center text-white text-xs lg:text-xl md:text-base tracking-wide mt-1 md:mt-2 xl:mt-5 lg:mb-5">
+                        Successful people typically aren't know-it-alls. They keep an open
+                        mind. They try to learn from everyone and every situation they
+                        come across
+                    </p>
+                    <button
+                        class="btn btn-active btn-primary text-xs lg:text-base md:text-xs tracking-wide font-bold w-32 h-6 lg:w-40 lg:h-14 md:w-36 md:h-6 mx-auto my-5 md:my-2">
+                        <a href="#">GET STARTED</a>
+                    </button>
+                </div>
+                <a href="#slide3"
+                    class="btn btn-circle bg-transparent text-white border-transparent text-sm md:text-xl">❯</a>
+            </div>
+        </div>
 
-
-    <!-------------------- banner end -------------- -->
-    <div class="justify-content-center">
-        <h1>Discover Our Popular <br> Course</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quis, facere cons</p>
+        <div id="slide3" class="carousel-item relative w-full">
+            <img src="img/cover/cover-4.jpg" class="w-full" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2"
+                    class="btn btn-circle bg-transparent text-white border-transparent text-sm md:text-xl absolute top-0 left-0 bottom-0 m-auto">❮</a>
+                <div class="xl:px-36 lg:px-24 md:px-5 flex flex-col justify-center items-center">
+                    <h1
+                        class="text-xl xl:text-6xl lg:text-5xl md:text-4xl text-center font-bold text-white tracking-wide uppercase">
+                        Start learning from today!
+                    </h1>
+                    <p
+                        class="text-center text-white text-xs lg:text-xl md:text-base tracking-wide mt-1 md:mt-2 xl:mt-5 lg:mb-5">
+                        Learning is “a process that leads to change, which occurs as a
+                        result of experience and increases the potential for improved
+                        performance and future learning”
+                    </p>
+                    <button
+                        class="btn btn-active btn-primary text-xs lg:text-base md:text-xs tracking-wide font-bold w-32 h-6 lg:w-40 lg:h-14 md:w-36 md:h-6 mx-auto my-5 md:my-2">
+                        <a href="#">GET STARTED</a>
+                    </button>
+                </div>
+                <a href="#slide1"
+                    class="btn btn-circle bg-transparent text-white border-transparent text-sm md:text-xl absolute top-0 right-0 bottom-0 m-auto">❯</a>
+            </div>
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
+    <!--------------------
+        
+        Banner area ends ----------------->
